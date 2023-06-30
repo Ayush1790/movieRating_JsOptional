@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Filter and Selecter</title>
+</head>
+
+<body>
+    <!-- main container  -->
+    <div class="container">
+        <h1>Movie Rating</h1>
+        <!-- header  -->
+        <header>
+            Title :
+            <input type="text" id="title" />
+            Rating:
+            <input type="number" id="rating" max="5" step="0.1" />
+            <button onclick="add()">Add Movies</button>
+    </div>
+    <br><br>
+    <!-- header select  -->
+    <div class="header__select">
+        Sort:
+        <select name="OS" id="filter_sort" onchange="filtering()">
+            <option value="">-Select-</option>
+            <option value="title">Title</option>
+            <option value="rating">Rating</option>
+        </select>
+
+        Order:
+        <select name="OS" id="filter_order" onchange="filtering()">
+            <option value="">-Select-</option>
+            <option value="ascending">Ascending</option>
+            <option value="descending">Descending</option>
+        </select>
+
+    </div>
+    <!-- headre table  -->
+    <div>
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Rating</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="table_body"></tbody>
+        </table>
+    </div>
+    </div>
+    </header>
+    </div>
+</body>
+<script src="./JS/script.js"></script>
+
+</html>
